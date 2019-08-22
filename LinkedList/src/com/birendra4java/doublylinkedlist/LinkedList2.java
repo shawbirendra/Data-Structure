@@ -27,62 +27,71 @@
 //   the entire file so it usually splits these up into chunks across the physical
 //  hard drive and stores a sequential list of links together as a linked list.
 // */
-//
-//package com.birendra4java.doublylinkedlist;
-//
-//import com.birendra4java.singlylinkedlist.Node1;
-//
-//public class LinkedList2 {
-//
-//	public Node1 head;
-//
-//	// public void add(int data) {
-//	// Node newNode = new Node(data);
-//	// if (head == null) {
-//	// head = newNode;
-//	// return;
-//	// } else {
-//	// Node current = head;
-//	// while (current != null) {
-//	// if (current.next == null) {
-//	// current.next = newNode;
-//	// break;
-//	// }
-//	// current = current.next;
-//	// }
-//	// }
-//	// }
-//	public void add(int data) {
-//		Node1 newNode = new Node1(data);
-//		if (head == null) {
-//			head = new Node1(data);
-//			return;
-//		}
-//		Node1 current = head;
-//		while (current.next != null) {
-//			current = current.next;
-//		}
-//		current.next = newNode;
-//	}
-//
-//	public void print() {
-//		Node1 current = head;
-//		while (current != null) {
-//			System.out.print(current.data + " -> ");
-//			current = current.next;
-//		}
-//		System.out.println();
-//	}
-//
-//	public void reverse(Node1 start) {
-//
-//		if (start == null) {
-//			System.out.println();
-//			return;
-//		}
-//		reverse(start.next);
-//		System.out.print(start.data + " <- ");
-//
-//	}
-//
-//}
+package com.techiebirendra.ds.test;
+
+class Node {
+	int data;
+	Node previous;
+	Node next;
+
+	Node(int data) {
+		this.data = data;
+		this.previous = null;
+		this.next = null;
+	}
+}
+
+public class LinkedListTest {
+	Node root;
+
+	public void add(int data) {
+		Node newNode = new Node(data);
+		if (root == null) {
+			root = new Node(data);
+			return;
+		}
+		Node current = root;
+		while (current.next != null) {
+			current = current.next;
+		}
+		current.next = newNode;
+		newNode.previous=current;
+		current=newNode;
+//		current.next=null;
+
+	}
+
+	public void print() {
+		Node current = root;
+		while (current != null) {
+			System.out.print(current.data + " -> ");
+			current = current.next;
+		}
+	}
+
+	// using recursion
+	public void reverse(Node n) {
+		if (n == null) {
+			return;
+		}
+		reverse(n.next);
+		System.out.print(n.data + " <-");
+	}
+
+	// without recursion
+	public void reverse2() {
+    
+	}
+
+	public static void main(String[] args) {
+		LinkedListTest test = new LinkedListTest();
+		test.add(15);
+		test.add(20);
+		test.add(30);
+		test.add(40);
+		 test.print();
+		 System.out.println();
+		test.reverse(test.root);
+	}
+}
+
