@@ -27,7 +27,7 @@
 //   the entire file so it usually splits these up into chunks across the physical
 //  hard drive and stores a sequential list of links together as a linked list.
 // */
-package com.techiebirendra.ds.test;
+package com.techiebirendra.doublylinkedlist;
 
 class Node {
 	int data;

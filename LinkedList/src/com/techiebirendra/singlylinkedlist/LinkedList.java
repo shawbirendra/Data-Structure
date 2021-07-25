@@ -1,5 +1,5 @@
 //-----------------Use Cases Of LinkedList------------------!!!
-package com.birendra4java.singlylinkedlist;
+package com.techiebirendra.singlylinkedlist;
 
 /**
  * 
@@ -36,18 +36,6 @@ package com.birendra4java.singlylinkedlist;
  *      sequential list of links together as a linked list.
  *
  */
-class Node {
-
-	public int data;
-	public Node next;
-
-	public Node() {
-	}
-
-	public Node(int data) {
-		this.data = data;
-	}
-}
 
 public class LinkedList {
 	public Node head;
@@ -61,7 +49,7 @@ public class LinkedList {
 	public void add(int data) {
 		Node newNode = new Node(data);
 		if (head == null) {
-			head = new Node(data);
+			head = newNode;
 			return;
 		}
 		Node current = head;

@@ -1,4 +1,4 @@
-package com.birendra4java.singlylinkedlist;
+package com.techiebirendra.singlylinkedlist;
 
 public class LinkedListTest {
 	

@@ -1,4 +1,4 @@
-package com.birendra4java.doublylinkedlist;
+package com.techiebirendra.doublylinkedlist;
 
 //Class for Doubly Linked List
 public class DLL {

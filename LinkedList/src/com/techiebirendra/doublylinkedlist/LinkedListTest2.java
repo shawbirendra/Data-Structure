@@ -1,4 +1,5 @@
-//package com.birendra4java.doublylinkedlist;
+package com.techiebirendra.doublylinkedlist;
+//package com.techiebirendra.doublylinkedlist;
 //
 //public class LinkedListTest2 {
 //	
