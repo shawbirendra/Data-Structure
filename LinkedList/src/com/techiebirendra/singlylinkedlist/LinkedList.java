@@ -4,7 +4,7 @@ package com.techiebirendra.singlylinkedlist;
 /**
  * 
  * @author birendra.ks
- * @see www.facebook.com/Birendra4java
+ * @see www.facebook.com/techiebirendra
  * 
  *      * Consider the history section of web browsers, where it creates a
  *      linked list of web-pages visited, so that when you check history
